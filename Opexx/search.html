@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="navbar">
+        <a href="home.html" style="margin-left: 100px;">Opexx</a>
+        <a href="pricing.html" >Pricing</a>
+        <a href="Search.html" style="margin-right: 100px;">Search</a>
+    </div>
+
+    <div class="intro1">
+      <a href="search.html" class="first">Live Tenders</a>  <a href="search.html" class="first">Winners </a><br>
+      <form >
+        <input type="text" id="keyword"  placeholder="Keyword" style="display: inline-block;width:40%;margin-right:20px;margin-bottom: 10px;">
+        <input type="text" id="location"   placeholder="Location" style="display: inline-block;width:20%;margin-right:20px;margin-bottom: 10px;"><br>
+        <span id="dots"></span>
+        <span id="more">
+          <input type="text" id="minv"   placeholder="Min Value" style="display: inline-block;width:40%;margin-right:20px;margin-bottom: 10px;">
+          <input type="text" id="maxv"   placeholder="Max Value" style="display: inline-block;width:40%;margin-right:20px;margin-bottom: 10px;">
+          <input type="text" id="buyer"   placeholder="Buyer Name" style="display: inline-block;width:40%;margin-right:20px;margin-bottom: 10px;">
+          <input type="text" id="cpv"   placeholder="CPV" style="display: inline-block;width: 40%;margin-right:20px;margin-bottom: 10px;">
+          
+          <div style="display: inline-block;width:40%;margin-right:20px;margin-bottom: 10px;">
+            <form aria-placeholder="Publsihed">
+              <select id="cars" name="Published" >
+                <option value="" disabled selected>Published</option>
+                <option value="at">Any Time</option>
+                <option value="saab">Today</option>
+                <option value="sv">Within Last 7 Days</option>
+                <option value="thirty">Within Last 30 Days</option>
+                <option value="thirty">Custom Range</option>
+              </select>
+            </form>
+          </div>
+
+          <div style="display: inline-block;width:40%;margin-right:20px;margin-bottom: 10px;">
+            <form >
+              <select>
+                <option value="" disabled selected>Deadline</option>
+                <option value="at">Any Time</option>
+                <option value="if">In Future</option>
+                <option value="sv">Within 7 Days</option>
+                <option value="thirty">Within 30 Days</option>
+                <option value="thirty">Custom Range</option>
+              </select>
+            </form>
+          </div>
+          
+
+       
+         
+         
+        </span>
+      </form> 
+      <button onclick="myFunction()" id="myBtn">Read Less</button>
+    </div>
+
+
+    <div style="text-align: center;margin-top:50px;">
+      <h1>9,000,000 tenders at your fingertips.</h1><br>
+      <h5 style="color:rgb(20, 97, 239);">Start free trial for 14 days. No credit card needed.</h5><br>
+      <button style="background-color:rgb(1, 142, 1);border-radius:5px;color:white;border: none;width: 150px;height:50px;" class="trial">Start Free Trial</button>
+    </div>
+    
+
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+      function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+      </script>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
